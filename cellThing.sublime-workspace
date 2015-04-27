@@ -1,0 +1,556 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"the",
+				"ThreadPriority	ThreadPriority"
+			],
+			[
+				"pos",
+				"TransformPoint(Vector3 position)	Vector3"
+			],
+			[
+				"color3",
+				"Color32(byte r, byte g, byte b, byte a)	Color32(byte r, byte g, byte b, byte a)"
+			],
+			[
+				"game",
+				"GameObject	GameObject"
+			],
+			[
+				"gameob",
+				"gameObject	*()"
+			],
+			[
+				"gameobj",
+				"gameObject	RaycastResult.*"
+			],
+			[
+				"trans",
+				"Transform.right"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "using UnityEngine;\nusing System.Collections;\n\npublic class CubeMouseOver : MonoBehaviour {\n\n	// Use this for initialization\n	public bool grow=false;\n	public float growSpeed=.1f;\n	public float totalGrowth=0f;\n	void Start () {\n		\n	}\n	\n	// Update is called once per frame\n	void Update () {\n\n\n	\n	}\n\n	void OnMouseOver(){\n\n		transform.localScale+=new Vector3(growSpeed,growSpeed,growSpeed);\n		totalGrowth+=growSpeed;\n\n	}\n\n	void OnMouseExit(){\n	//	gameObject.ScaleBy(new Vector3(-totalGrowth,-totalGrowth,-totalGrowth),2f,.5f,EaseType.easeInBounce);\n		//totalGrowth=0f;\n	}\n\n}\n",
+			"file": "Assets/CubeMouseOver.cs",
+			"file_size": 569,
+			"file_write_time": 130725496233615042,
+			"settings":
+			{
+				"buffer_size": 569,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "using UnityEngine;\nusing System.Collections;\n\npublic class CastMouseRay : MonoBehaviour {\n\n	// Use this for initialization\n	void Start () {\n		}\n	\n	// Update is called once per frame\n	void Update () {\n		Camera cam=gameObject.GetComponent<Camera>();\n		Ray ray = cam.ScreenPointToRay(Input.mousePosition);\n		Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);\n		\n\n	}\n}\n",
+			"file": "Assets/castMouseRay.cs",
+			"file_size": 378,
+			"file_write_time": 130725504368664249,
+			"settings":
+			{
+				"buffer_size": 375,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/rotBird.cs",
+			"settings":
+			{
+				"buffer_size": 243,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Script/Kinect/KinectWrapper/KinectEmulator.cs",
+			"settings":
+			{
+				"buffer_size": 3603,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "using UnityEngine;\nusing System.Collections;\n\npublic class KillBird : MonoBehaviour {\n\n	// Use this for initialization\n	void Start () {\n	\n	}\n	\n	// Update is called once per frame\n	void Update () {\n	\n	}\n\n	public void ReallyKillBird(bool heaven){\n\n		StartCoroutine(DeadBird(heaven));\n		\n	}\n\n	public IEnumerator DeadBird(bool heaven){\n		\n		while(transform.position.y<=10f &&transform.position.y>=-10f){\n			if(heaven){\n				transform.Translate(0f,.05f,0f);\n			}\n			else{\n				transform.Translate(0f,-.05f,0f);\n			} \n			yield return 0;\n		}\n	}\n}\n",
+			"file": "Assets/killBird.cs",
+			"file_size": 538,
+			"file_write_time": 130725524662206154,
+			"settings":
+			{
+				"buffer_size": 538,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "using UnityEngine;\nusing System.Collections;\n\npublic class MovePlayer : MonoBehaviour {\n	public float moveSpeed=5f;\n	public Vector3 targetPos;\n	public Rigidbody rbody;\n	public float maxVelocity=5f;\n	public bool moving=false;\n	// Use this for initialization\n	void Start () {\n		rbody=GetComponent<Rigidbody>();\n	}\n	\n	// Update is called once per frame\n	void Update () {\n		Ray cursorRay= Camera.main.ScreenPointToRay(Input.mousePosition);\n		RaycastHit cursorRayHit= new RaycastHit();\n\n\n		if(Physics.Raycast(cursorRay, out cursorRayHit, 1000f)){\n\n			if (Input.GetMouseButtonDown(0)){\n				targetPos=cursorRayHit.point;\n				moving=true;\n				rbody.drag=.1f;\n				}\n		}\n\n			if(moving){\n				\n				Vector3 direction =targetPos-transform.position;\n				Vector3 directionNormalized=direction.normalized;\n				rbody.AddForce(directionNormalized*moveSpeed,ForceMode.Impulse);\n				if(rbody.velocity.magnitude > maxVelocity)\n				{\n					rbody.velocity *= 0.99f;\n				}\n\n			if(direction.magnitude<1f){\n				moving=false;\n				rbody.drag=1000f;\n\n\n			}\n		}\n	\n	}\n}\n",
+			"file": "/C/Users/dioby_000/Documents/YangStealthGame/Assets/MovePlayer.cs",
+			"file_size": 1035,
+			"file_write_time": 130723890430272153,
+			"settings":
+			{
+				"buffer_size": 1037,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/dioby_000/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 354,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 89.0,
+		"last_filter": "disable",
+		"selected_items":
+		[
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"package disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"inta",
+				"Package Control: Install Package"
+			],
+			[
+				"packa ins",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"unity",
+				"Set Syntax: Unity C#"
+			],
+			[
+				"package contro: instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/dioby_000/Documents/cellThing"
+	],
+	"file_history":
+	[
+		"/C/Users/dioby_000/AppData/Roaming/Sublime Text 3/Packages/OmniSharp/OmniSharpSublime.sublime-settings",
+		"/C/Users/dioby_000/AppData/Roaming/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/C/Users/dioby_000/AppData/Roaming/Sublime Text 3/Packages/User/C#.sublime-settings",
+		"/C/Users/dioby_000/Documents/cellThing/Assets/CubeMouseOver.cs",
+		"/C/Users/dioby_000/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/dioby_000/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/dioby_000/Documents/cellThing/Assets/rotBird.cs",
+		"/C/Users/dioby_000/Documents/cellThing/cellThing.sublime-project",
+		"/C/Users/dioby_000/Documents/cellThing/cellThing.sln",
+		"/C/Users/dioby_000/AppData/Roaming/Sublime Text 3/Packages/User/Plain text.sublime-settings",
+		"/C/Users/dioby_000/Documents/cellThing/Assets/killBird.cs",
+		"/C/Users/dioby_000/Desktop/terr.html",
+		"/C/Users/dioby_000/Desktop/index.html",
+		"/C/Users/dioby_000/AppData/Roaming/Sublime Text 3/Packages/User/chrome.sublime-build",
+		"/C/Users/dioby_000/AppData/Roaming/Sublime Text 3/Packages/User/chrome2.sublime-build"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"theme"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Assets/CubeMouseOver.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 569,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								227,
+								227
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/castMouseRay.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 375,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								368,
+								368
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/rotBird.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 243,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								195,
+								195
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/Script/Kinect/KinectWrapper/KinectEmulator.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3603,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								297,
+								297
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/killBird.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 538,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								284,
+								284
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/dioby_000/Documents/YangStealthGame/Assets/MovePlayer.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1037,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								224,
+								224
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/dioby_000/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 354,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								290,
+								290
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 116.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.variable_get":
+	{
+		"height": 122.0
+	},
+	"pinned_build_system": "",
+	"project": "cellThing.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 145.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
