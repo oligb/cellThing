@@ -8,7 +8,6 @@ public class CubeMouseOver : MonoBehaviour {
 	public float growSpeed=.1f;
 	public float totalGrowth=0f;
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame

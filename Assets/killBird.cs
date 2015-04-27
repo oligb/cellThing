@@ -14,6 +14,7 @@ public class KillBird : MonoBehaviour {
 	}
 
 	public void ReallyKillBird(bool heaven){
+
 		StartCoroutine(DeadBird(heaven));
 	}
 

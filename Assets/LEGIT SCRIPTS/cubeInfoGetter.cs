@@ -24,7 +24,10 @@ public class cubeInfoGetter : MonoBehaviour {
 
 		float perlin= Mathf.PerlinNoise(transform.position.x/perlinScaler+perlinLoc,transform.position.z/perlinScaler+perlinLoc)*scaler;
 		transform.localScale = new Vector3(perlin,perlin,perlin)+new Vector3(totalGrowth,totalGrowth,totalGrowth);
+	}
 
+
+		/*
 		if(grow){
 			totalGrowth+=growSpeed;
 		}
@@ -47,5 +50,5 @@ public class cubeInfoGetter : MonoBehaviour {
 	void ResetGrowth(){
 		totalGrowth=0f;
 	}
-
+*/
 }

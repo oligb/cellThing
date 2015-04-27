@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 82c5b0daf8795454ea5ddae2cdb3cec8
-timeCreated: 1427388747
+guid: 8ecad50c4a6665a4282c860a267b8902
+timeCreated: 1428009488
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -46,9 +46,7 @@ ModelImporter:
     400036: joint9
     400038: pCube1
     4300000: pCube1
-    7400000: takeoff
-    7400002: flap
-    7400004: land
+    7400000: Take 001
     9500000: //RootNode
     13700000: pCube1
   materials:
@@ -68,148 +66,16 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: takeoff
+      name: Take 001
       takeName: Take 001
-      firstFrame: 1
-      lastFrame: 30
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: joint1
-        weight: 1
-      - path: joint1/joint2
-        weight: 1
-      - path: joint1/joint2/joint3
-        weight: 1
-      - path: joint1/joint2/joint3/joint4
-        weight: 1
-      - path: joint1/joint2/joint3/joint5
-        weight: 1
-      - path: joint1/joint2/joint3/joint5/joint6
-        weight: 1
-      - path: joint1/joint2/joint3/joint7
-        weight: 1
-      - path: joint1/joint2/joint3/joint7/joint8
-        weight: 1
-      - path: joint1/joint2/joint3/joint7/joint8/joint9
-        weight: 1
-      - path: joint1/joint2/joint3/joint13
-        weight: 1
-      - path: joint1/joint2/joint3/joint13/joint14
-        weight: 1
-      - path: joint1/joint2/joint3/joint13/joint14/joint15
-        weight: 1
-      - path: joint1/joint10
-        weight: 1
-      - path: joint1/joint10/joint11
-        weight: 1
-      - path: joint1/joint10/joint11/joint12
-        weight: 1
-      - path: joint1/joint16
-        weight: 1
-      - path: joint1/joint16/joint17
-        weight: 1
-      - path: joint1/joint16/joint17/joint18
-        weight: 1
-      - path: pCube1
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: flap
-      takeName: Take 001
-      firstFrame: 32
-      lastFrame: 60
+      firstFrame: 30
+      lastFrame: 65
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: joint1
-        weight: 1
-      - path: joint1/joint2
-        weight: 1
-      - path: joint1/joint2/joint3
-        weight: 1
-      - path: joint1/joint2/joint3/joint4
-        weight: 1
-      - path: joint1/joint2/joint3/joint5
-        weight: 1
-      - path: joint1/joint2/joint3/joint5/joint6
-        weight: 1
-      - path: joint1/joint2/joint3/joint7
-        weight: 1
-      - path: joint1/joint2/joint3/joint7/joint8
-        weight: 1
-      - path: joint1/joint2/joint3/joint7/joint8/joint9
-        weight: 1
-      - path: joint1/joint2/joint3/joint13
-        weight: 1
-      - path: joint1/joint2/joint3/joint13/joint14
-        weight: 1
-      - path: joint1/joint2/joint3/joint13/joint14/joint15
-        weight: 1
-      - path: joint1/joint10
-        weight: 1
-      - path: joint1/joint10/joint11
-        weight: 1
-      - path: joint1/joint10/joint11/joint12
-        weight: 1
-      - path: joint1/joint16
-        weight: 1
-      - path: joint1/joint16/joint17
-        weight: 1
-      - path: joint1/joint16/joint17/joint18
-        weight: 1
-      - path: pCube1
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: land
-      takeName: Take 001
-      firstFrame: 65
-      lastFrame: 80
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

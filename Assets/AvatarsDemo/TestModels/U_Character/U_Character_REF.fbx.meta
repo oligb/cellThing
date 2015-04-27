@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: ae23d50304c93b9418b65cec8f9fe954
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 18
   fileIDToRecycleName:
     100000: joint_CapitateLT
     100002: joint_CapitateRT
@@ -215,11 +215,13 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -1056,3 +1058,5 @@ ModelImporter:
   animationType: 3
   additionalBone: 1
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

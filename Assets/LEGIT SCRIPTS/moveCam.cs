@@ -5,6 +5,7 @@ public class moveCam : MonoBehaviour {
 
 	public float mouseX;
 	public float mouseY;
+	public float yScale=2f;
 	public float xScale=2f;
 	public GameObject cam;
 	public Vector3 mousePos;
@@ -17,6 +18,11 @@ public class moveCam : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		mouseY=Input.GetAxis("Mouse Y");
+
+		transform.Translate(Vector3.forward*mouseY);
+		/*
 		mouseX=Input.GetAxis("Mouse X")*xScale;
 		mouseY=Input.GetAxis("Mouse Y");
 		pos_ = transform.position;
@@ -30,6 +36,6 @@ public class moveCam : MonoBehaviour {
 		}
 
 		cam.transform.Rotate(new Vector3(0f,mouseX,0f));
-	
+	*/
 	}
 }
