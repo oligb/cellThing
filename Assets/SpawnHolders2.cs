@@ -7,7 +7,7 @@ public class SpawnHolders2 : MonoBehaviour {
 	public GameObject holder;
 	public int numCubes=20;
 	void Start () {
-		for(int i =0;i<500;i++){
+		for(int i =0;i<numCubes;i++){
 			GameObject tHolder=Instantiate(holder,transform.localPosition,Quaternion.identity) as GameObject;
 			tHolder.transform.parent=gameObject.transform;
 		}

@@ -16,6 +16,8 @@ public class AnotherCubeController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+	
+
 		if(Input.GetKeyDown("space")){
 			//transform.localPosition=Vector3.zero;
 			Zero ();

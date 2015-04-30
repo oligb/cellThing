@@ -11,3 +11,9 @@ EditorBuildSettings:
     path: Assets/SCENES/spinnyMover.unity
   - enabled: 0
     path: Assets/SCENES/cardboardVersion.unity
+  - enabled: 0
+    path: Assets/SCENES/ProperCubeScene.unity
+  - enabled: 0
+    path: Assets/SCENES/ProperCubeScene.unity
+  - enabled: 1
+    path: Assets/SCENES/kinectCubes.unity

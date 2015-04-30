@@ -12,12 +12,13 @@ public class SpawnCube : MonoBehaviour {
 	void Start () {
 		Vector3 targetPos = Random.onUnitSphere*radius;
 		//Vector3 targetPos=Vector3.forward*radius;
+
 		GameObject tCube= Instantiate(cube,transform.localPosition,Quaternion.identity) as GameObject;
-	
+		
 		tCube.transform.parent=gameObject.transform;
 		tCube.GetComponent<CubeController>().CallCoroutine(targetPos,moveOutSpeed);
 		transform.LookAt(tCube.transform.position);
-
+			
 		rotType=Random.Range (1,3);
 	
 	}
@@ -35,5 +36,9 @@ public class SpawnCube : MonoBehaviour {
 			transform.Rotate(new Vector3(-1f,-rotSpeed,-rotSpeed));
 		}
 
+
+		if(Input.GetKeyDown("space")){
+			transform.rotation=Quaternion.Euler(Random.onUnitSphere*10f);
+		}
 	}
 }

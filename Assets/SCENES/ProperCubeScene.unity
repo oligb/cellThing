@@ -99,7 +99,7 @@ GameObject:
   - 114: {fileID: 369730525}
   - 114: {fileID: 369730528}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holder: {fileID: 125496, guid: 0b19eaa6ef0d4574186702357517b30a, type: 2}
-  numCubes: 20
+  numCubes: 400
 --- !u!114 &369730528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,8 +522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b671f5a92df8047b424d52f553b983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensibilityFast: 20
-  sensibilitySlow: 8
 --- !u!4 &2041909488
 Transform:
   m_ObjectHideFlags: 0

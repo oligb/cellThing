@@ -10,6 +10,7 @@ public class AnotherCubeSpawner : MonoBehaviour {
 	public Vector3 targetPos;
 	public Vector3 rotVector;
 	void Start () {
+		//radius=Random.Range(5f,20f);
 		targetPos = Random.onUnitSphere*radius;
 
 		//Vector3 targetPos=Vector3.forward*radius;
@@ -27,6 +28,8 @@ public class AnotherCubeSpawner : MonoBehaviour {
 			rotVector.x=Random.Range(20f,30f);
 		}
 
+
+		//transform.localScale=Random.Range(2f,5f)*Vector3.one;
 	}
 	
 	// Update is called once per frame

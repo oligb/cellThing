@@ -41,8 +41,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 10
-  cube: {fileID: 151950, guid: 11bccdee910028741ac3ac210e467915, type: 2}
-  moveSpeed: 3
+  cube: {fileID: 185058, guid: 4da06235af5d31042b69a7d4f5b87cd3, type: 2}
+  moveSpeed: 2
   targetPos: {x: 0, y: 0, z: 0}
   rotVector: {x: 20, y: 5, z: 0}
 --- !u!114 &11460178
@@ -58,6 +58,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotVector: {x: 12.6499996, y: -20, z: -9.29999447}
   controller: {fileID: 0}
+  flip: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

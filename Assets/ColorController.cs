@@ -22,7 +22,7 @@ public class ColorController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		perlinScale=Mathf.Lerp(1f,15f,MidiInput.GetKnob(1,MidiInput.Filter.Slow));
+		//perlinScale=Mathf.Lerp(1f,15f,MidiInput.GetKnob(1,MidiInput.Filter.Slow));
 
 		float perlinMod=.5f-Mathf.PerlinNoise(perlinVal2,0f);
 		xScrollSpeed=perlinMod/scaleScaler;

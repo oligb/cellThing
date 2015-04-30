@@ -17,5 +17,9 @@ public class controlCenter : MonoBehaviour {
 		float mouseX= mouseScale * Input.GetAxis ("Mouse X");
 		float mouseY= mouseScale * Input.GetAxis ("Mouse Y");
 		transform.Rotate(mouseX,mouseY,mouseX+mouseY);
+
+		if(Input.GetKeyDown("space")){
+			transform.position=Vector3.zero;
+		}
 	}
 }
