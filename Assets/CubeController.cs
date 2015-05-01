@@ -13,7 +13,7 @@ public class CubeController : MonoBehaviour {
 	void Update () {
 
 
-		//transform.Rotate(10f,10f,10f);
+		transform.Rotate(10f,10f,10f);
 		/*
 		if(Input.GetKeyDown("space")){
 			

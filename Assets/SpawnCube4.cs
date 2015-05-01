@@ -36,9 +36,6 @@ public class SpawnCube4 : MonoBehaviour {
 			transform.Rotate(new Vector3(-1f,-rotSpeed,-rotSpeed));
 		}
 		
-		
-		if(Input.GetKeyDown("space")){
-			transform.rotation=Quaternion.Euler(Random.onUnitSphere*10f);
-		}
+
 	}
 }
