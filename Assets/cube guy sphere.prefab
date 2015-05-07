@@ -89,7 +89,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: .200000003
+  m_Time: 1
   m_StartWidth: .200000003
   m_EndWidth: 0
   m_Colors:
@@ -162,7 +162,7 @@ MonoBehaviour:
   trail: {fileID: 0}
   perlinPos: 0
   perlinInc: .00999999978
-  perlinScale: 1
+  perlinScale: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

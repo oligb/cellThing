@@ -57,9 +57,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cube: {fileID: 131678, guid: a5019464d4279ce40b9713f60f874c58, type: 2}
-  rotSpeed: 1
-  radius: 5
-  moveOutSpeed: .100000001
+  rotSpeed: 2
+  radius: 10
+  moveOutSpeed: .0500000007
   rotType: 0
 --- !u!1001 &100100000
 Prefab:

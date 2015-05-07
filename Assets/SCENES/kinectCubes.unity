@@ -379,7 +379,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 431647786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79020806963f63e438053e01000be375, type: 3}
+  m_Script: {fileID: 11500000, guid: 6deb907337047c548a271c1301178c2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   centerCube: {fileID: 0}
@@ -389,13 +389,13 @@ MonoBehaviour:
   distLeft: 0
   distRight: 0
   distCenter: 0
-  moveSpeed: .100000001
+  moveSpeed: 1
   startPos: {x: 0, y: 0, z: 0}
-  repulseScale: 2
+  repulseScale: 5
   targetPos: {x: 0, y: 0, z: 0}
   distToCenter: 0
   perlinLoc: 0
-  perlinInc: .00999999978
+  perlinInc: .100000001
   perlinMod: 0
   perlinScale: .5
   childCube: {fileID: 0}
@@ -429,8 +429,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1091d3916329c48aadb191d87acf16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  repulseScript: {fileID: 0}
-  trail: {fileID: 0}
 --- !u!1 &551263486
 GameObject:
   m_ObjectHideFlags: 0

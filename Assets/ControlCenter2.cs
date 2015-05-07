@@ -18,7 +18,7 @@ void Update () {
 	transform.Translate(inputX,inputY,0f);
 	float mouseX= mouseScale * Input.GetAxis ("Mouse X");
 	float mouseY= mouseScale * Input.GetAxis ("Mouse Y");
-	transform.Rotate(mouseX,mouseY,mouseX+mouseY);
+	//transform.Rotate(mouseX,mouseY,mouseX+mouseY);
 
 	}
 }
