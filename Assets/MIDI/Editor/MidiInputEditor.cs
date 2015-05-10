@@ -7,8 +7,15 @@ using System.Collections.Generic;
 [CustomEditor(typeof(MidiInput))]
 class MidiInputEditor : Editor
 {
+
+
     public override void OnInspectorGUI ()
     {
+
+
+
+
+
         var midi = target as MidiInput;
 
         // Filter sensibility settings.

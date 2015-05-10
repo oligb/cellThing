@@ -13,7 +13,9 @@ public class rotateCamera : MonoBehaviour {
 	void Update () {
 		float mouseX= mouseScale * Input.GetAxis ("Mouse X");
 		float mouseY= mouseScale * Input.GetAxis ("Mouse Y");
-		transform.Rotate(-mouseY,mouseX,0f);
+		//transform.Rotate(-mouseY,mouseX,0f);
+
+		transform.Rotate(.2f,.2f,0f);
 
 		if(Input.GetKeyDown("space")){
 			//Application.LoadLevel("Spheres");
